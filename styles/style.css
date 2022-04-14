@@ -1,0 +1,160 @@
+    /**** R E S E T  start****/
+*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+all: unset;
+display: revert;
+}
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+a, button {
+cursor: revert;
+}
+ol, ul, menu {
+list-style: none;
+}
+img {
+max-width: 100%;
+}
+table {
+border-collapse: collapse;
+}
+textarea {
+white-space: revert;
+}
+meter {
+-webkit-appearance: revert;
+appearance: revert;
+}
+::placeholder {
+color: unset;
+}
+:where([hidden]) {
+display: none;
+}
+:where([contenteditable]) {
+-moz-user-modify: read-write;
+-webkit-user-modify: read-write;
+overflow-wrap: break-word;
+-webkit-line-break: after-white-space;
+}
+:where([draggable=
+true
+]) {
+-webkit-user-drag: element;
+}
+    /**** R E S E T  end****/
+
+body{
+    font-size: 15px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+article{
+    padding: 3.2em;
+    max-width: 375px;
+}
+h2{
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: hsl(0, 0%, 95%);
+    margin-bottom: 42px;
+}
+img{
+    margin-bottom: 42px;
+}
+article p{
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 1.1rem;
+}
+button{
+    padding: 1em 2.5em;
+    border-radius: 2em;
+    background-color: hsl(0, 0%, 95%);
+    margin-top: 28px;
+    border: 2px solid;
+}
+a{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.1rem;
+}
+
+/* SEDANS */
+
+.card-sedans{
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em; 
+}
+.card-sedans>a{
+    color: hsl(31, 77%, 52%);
+}
+.card-sedans>a:hover{
+    color: hsl(0, 0%, 100%, 0.75);
+}
+.card-sedans button:hover{
+    background-color: hsl(31, 77%, 52%);
+    cursor: pointer;
+}
+
+/* SUVS */
+
+.card-suvs{
+    background-color: hsl(184, 100%, 22%);
+}
+.card-suvs>a{
+    color: hsl(184, 100%, 22%)
+}
+.card-suvs>a:hover{
+    color: hsl(0, 0%, 100%, 0.75);
+}
+.card-suvs button:hover{
+    background-color: hsl(184, 100%, 22%);
+    cursor: pointer;
+}
+
+/* LUXURY */
+
+.card-luxury{
+    background-color: hsl(179, 100%, 13%);
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+.card-luxury>a{
+    color: hsl(179, 100%, 13%);
+}
+.card-luxury>a:hover{
+    color: hsl(0, 0%, 100%, 0.75);
+}
+.card-luxury button:hover{
+    background-color: hsl(179, 100%, 13%);
+    cursor: pointer;
+}
+
+/******* DESKTOP ******/
+
+@media (min-width: 980px) {
+
+    .container{
+        flex-direction: row;
+    }
+    .card-sedans{
+        border-top-left-radius: 0.5em;
+        border-top-right-radius: 0em;
+        border-bottom-left-radius: 0.5em;
+    }
+    .card-luxury{
+        border-top-left-radius: 0em;
+        border-top-right-radius: 0.5em;
+        border-bottom-left-radius: 0em;
+    }
+
+}
